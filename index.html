@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterboxd - Clean Dropdown UI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo" onclick="loadPopular()">LETTERBOXD 2.0</div>
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="genre-trigger" onclick="toggleDropdown()">Genres ▾</button>
+                <div id="genreDropdown" class="dropdown-content">
+                    </div>
+            </div>
+            <input type="text" id="search" class="search-bar" placeholder="Search...">
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="section-header">
+        <h3 id="viewTitle">Popular Movies</h3>
+    </div>
+    <div class="movie-grid" id="movieGrid"></div>
+</div>
+<div id="movieModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg" class="modal-poster" src="" alt="">
+        <div class="modal-details">
+            <h2 id="modalTitle" style="color:white"></h2>
+            <p id="modalRating" class="rating"></p>
+            <p id="modalDesc" style="line-height:1.5"></p>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
